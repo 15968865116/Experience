@@ -179,6 +179,8 @@ training/webapp     latest              6fae60ef3446        11 months ago       
 ~$ docker run 你已有的镜像
 ```
 
+端口号 -p
+
 ## 命令行进入镜像
 
 ```bash
@@ -248,3 +250,11 @@ docker save -o gochatting.tar gochatting:v2
 需要注册 然后docker login
 上传的镜像必须要以自己的名字开头
 比如zhujunjiechina/xxx:v3这样
+
+# Docker 乌班图内出现509错误：在go get时发生
+
+原因：安装了golang  但是并未安装git 安装git即可解决该问题。
+
+# Docker 一些权限问题 
+
+最主要的还是要加上 sudo ！！！！切记！！！
