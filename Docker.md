@@ -258,3 +258,33 @@ docker save -o gochatting.tar gochatting:v2
 # Docker 一些权限问题 
 
 最主要的还是要加上 sudo ！！！！切记！！！
+
+docker-compose下载
+
+Linux 上我们可以从 Github 上下载它的二进制包来使用，最新发行的版本地址：https://github.com/docker/compose/releases。
+
+运行以下命令以下载 Docker Compose 的当前稳定版本：
+
+```bash
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+要安装其他版本的 Compose，请替换 1.24.1。
+
+将可执行权限应用于二进制文件：
+
+```bash
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+创建软链：
+
+```bash
+$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+
+测试是否安装成功：
+
+```bash
+$ docker-compose --version
+cker-compose version 1.24.1, build 4667896b
+```
